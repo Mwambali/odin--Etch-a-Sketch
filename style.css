@@ -1,0 +1,109 @@
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.settings {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.3s;
+}
+
+button.active {
+    background-color: #555;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.size-value {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(21, 25px) 1fr 1fr 1fr;
+    gap: 1px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.grid-element {
+    width: calc(100% - 2px);
+    /* Subtracting border width */
+    height: calc(100% - 2px);
+    /* Subtracting border width */
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.grid-element:hover {
+    background-color: #ccc;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-github {
+    font-size: 24px;
+    margin-left: 5px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
